@@ -128,7 +128,7 @@ const MODELOS = [
 // WEB APP
 // ---------------------------------------------------------------------------
 function doGet() {
-  return HtmlService.createHtmlOutputFromFile('Index')
+  return HtmlService.createHtmlOutputFromFile('index')
     .setTitle('Ensembles meteorológicos')
     .addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
@@ -229,7 +229,7 @@ function parsearTabla_(html, cfg) {
   }
 
   // 2) Fila de cabecera: "Date | Ech. | 0/1 | ... | 30/40 | GFS"
-  const iCab = filas.findIndex(function (f) {
+  const iCab = filas.findindex(function (f) {
     return f.length >= 4 && /^date$/i.test(f[0]) && /^ech/i.test(f[1]);
   });
   if (iCab < 0) {
